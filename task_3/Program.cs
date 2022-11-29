@@ -25,7 +25,8 @@ internal class Program
             // Проверка на корректность ввода и допустимые значения для дня, месяца и года учитывая високосные года.
             if (
                 Regex.IsMatch(input, @"^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-(19|20)\d\d$") &&
-                int.Parse(input.Substring(0, 2)) <= DateTime.DaysInMonth(int.Parse(input.Substring(6, 4)), int.Parse(input.Substring(3, 2)))
+                int.Parse(input.Substring(0, 2)) <= DateTime.DaysInMonth(int.Parse(input.Substring(6, 4)),
+                    int.Parse(input.Substring(3, 2)))
             )
                 Console.WriteLine("Введенные данные корректны");
             else
